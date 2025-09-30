@@ -4,16 +4,19 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Newsletter Subscription</title>
-        <link rel="stylesheet" href="assets/css/main.css>"/> 
+        <link rel="stylesheet" href="assets/css/main.css"/> 
     </head>
-    <body>
-        <main>
+<body>
+    <main>
+        
             <header>
-                <img src="assets/images/businesspeople.png" alt="Business People" />
+                <div class="newsletter__background">
+                <img class="newsletter__people" src="assets/images/businesspeople.webp" alt="Business People" />
+                </div>
                 <h1>Subscribe to Our Newsletter</h1>
                 <p>Welcome to our newsletter hub, where we bring you the latest happenings, exclusive content, and behind-the-scenes insights.</p>
             </header>
-
+        <div class="container">
             <section class="subscription-form">
                 <form action="#" method="post">
                     <input type="text" name="name" placeholder="name@email.com" required />
@@ -25,9 +28,15 @@
                 <p>"Your information will never be shared with third parties, and you can unsubscribe from our updates at any time"</p>
             </section>
 
-            <section class="company-logos">
-
+            <section class="newsletter__logos">
+              <div><span><img class="newsletter__logos--logo" src="assets/images/ferretdb.svg" alt="ferretdb logo"></span>Logos Are Us</div>
+              <div><span><img class="newsletter__logos--logo" src="assets/images/babylondotjs.svg" alt="babylondot logo"></span>Logos Are Us</div>
+              <div><span><img class="newsletter__logos--logo" src="assets/images/codacy.svg" alt="codacy logo"></span>Logos Are Us</div>
+              <div><span><img class="newsletter__logos--logo" src="assets/images/coderabbit.svg" alt="coderabbit logo"></span>Logos Are Us</div>
+              <div><span><img class="newsletter__logos--logo" src="assets/images/fireflyiii.svg" alt="firefly logo"></span>Logos Are Us</div>
+              <div><span><img class="newsletter__logos--logo" src="assets/images/gerrit.svg" alt="gerrit logo"></span>Logos Are Us</div>
             </section>
-        </main>
-    </body>
+        </div>
+    </main>
+</body>
 </html>

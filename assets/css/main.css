@@ -52,7 +52,7 @@ table {
 :root {
     --primary-color: #4CAF50;
     --secondary-color: #ff5722;
-    --background-color: #F6F6F6; 
+    --background-color: #e7e5e5; 
     --text-color: #333;
     --font-family: 'Lato', sans-serif;
     
@@ -63,5 +63,38 @@ table {
 
 body {
     font-family: var(--font-family);
-    background: var(--background-color)
+    background: var(--background-color);
+	max-width: 75rem;
+}
+
+header {
+	text-align: center;
+}
+
+.newsletter__background {
+	position: relative;
+	display: inline-block;
+}
+
+.newsletter__people {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	width: 1000px;
+	
+}
+
+.newsletter__background::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 20%;
+	background: linear-gradient(to top, rgba(255, 255, 255, 0.9), transparent);
+	backdrop-filter: blur(1px);
+}
+
+.newsletter__logos--logo {
+	width: 20px;
 }
