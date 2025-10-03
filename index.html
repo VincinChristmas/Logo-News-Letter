@@ -1,42 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Newsletter Subscription</title>
-        <link rel="stylesheet" href="assets/css/main.css"/> 
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsletter Subscription</title>
+    <link rel="stylesheet" href="assets/css/main.css"/> 
+</head>
 <body>
-    <main>
-        
-            <header>
-                <div class="newsletter__background">
-                <img class="newsletter__people" src="assets/images/businesspeople.webp" alt="Business People" />
-                </div>
-                <h1>Subscribe to Our Newsletter</h1>
-                <p>Welcome to our newsletter hub, where we bring you the latest happenings, exclusive content, and behind-the-scenes insights.</p>
-            </header>
-        <div class="container">
-            <section class="newsletter__form">
-                <form action="#" method="post">
-                    <input type="text" name="name" placeholder="name@email.com" required />
-                    <button type="submit">Subscribe</button>
-                </form>
-            </section>
-
-            <section class="more-info">
-                <p>"Your information will never be shared with third parties, and you can unsubscribe from our updates at any time"</p>
-            </section>
-
-            <section class="newsletter__logos">
-              <div><span><img class="newsletter__logos--logo" src="assets/images/ferretdb.svg" alt="ferretdb logo"></span>Logos Are Us</div>
-              <div><span><img class="newsletter__logos--logo" src="assets/images/babylondotjs.svg" alt="babylondot logo"></span>Logos Are Us</div>
-              <div><span><img class="newsletter__logos--logo" src="assets/images/codacy.svg" alt="codacy logo"></span>Logos Are Us</div>
-              <div><span><img class="newsletter__logos--logo" src="assets/images/coderabbit.svg" alt="coderabbit logo"></span>Logos Are Us</div>
-              <div><span><img class="newsletter__logos--logo" src="assets/images/fireflyiii.svg" alt="firefly logo"></span>Logos Are Us</div>
-              <div><span><img class="newsletter__logos--logo" src="assets/images/gerrit.svg" alt="gerrit logo"></span>Logos Are Us</div>
-            </section>
+    <!-- Main Block: Newsletter (wraps entire component) -->
+    <div class="newsletter">
+        <!-- Element: Newsletter Hero (image + heading + intro text) -->
+        <div class="newsletter__hero">
+            <!-- Element: Hero Image Container -->
+            <div class="newsletter__hero-image-container">
+                <img class="newsletter__hero-image" src="assets/images/businesspeople.webp" alt="Business People collaborating" />
+            </div>
+            
+            <!-- Element: Hero Heading -->
+            <h1 class="newsletter__hero-heading">Subscribe to Our Newsletter</h1>
+            
+            <!-- Element: Hero Description -->
+            <p class="newsletter__hero-desc">
+                Welcome to our newsletter hub, where we bring you the latest happenings, exclusive content, and behind-the-scenes insights.
+            </p>
         </div>
-    </main>
+
+        <!-- Element: Newsletter Container (centers form + logos) -->
+        <div class="newsletter__container">
+            <!-- Element: Newsletter Form -->
+            <form class="newsletter__form" action="#" method="post">
+                <!-- Element: Form Input -->
+                <input 
+                    class="newsletter__form-input" 
+                    type="email" 
+                    name="email" 
+                    placeholder="name@email.com" 
+                    required 
+                />
+                <!-- Element: Form Button -->
+                <button class="newsletter__form-button" type="submit">
+                    Subscribe Now &rarr;
+                </button>
+            </form>
+
+            <!-- Element: Newsletter Info (privacy text) -->
+            <div class="newsletter__info">
+                <p class="newsletter__info-text">
+                    "Your information will never be shared with third parties, and you can unsubscribe from our updates at any time."
+                </p>
+            </div>
+
+            <!-- Element: Newsletter Logos (with blur background) -->
+            <div class="newsletter__logos">
+                <!-- Element: Logos Background (for blur effect) -->
+                <div class="newsletter__logos-background">
+                    <!-- Element: Logos Grid (wraps individual logo items) -->
+                    <div class="newsletter__logos-grid">
+                        <!-- Each logo item is a Element: newsletter__logos-item -->
+                        <div class="newsletter__logos-item">
+                            <img class="newsletter__logos-icon" src="assets/images/ferretdb.svg" alt="FerretDB logo">
+                            <span class="newsletter__logos-name">Logos Are Us</span>
+                        </div>
+                        <div class="newsletter__logos-item">
+                            <img class="newsletter__logos-icon" src="assets/images/babylondotjs.svg" alt="Babylon.js logo">
+                            <span class="newsletter__logos-name">Logos Are Us</span>
+                        </div>
+                        <div class="newsletter__logos-item">
+                            <img class="newsletter__logos-icon" src="assets/images/codacy.svg" alt="Codacy logo">
+                            <span class="newsletter__logos-name">Logos Are Us</span>
+                        </div>
+                        <div class="newsletter__logos-item">
+                            <img class="newsletter__logos-icon" src="assets/images/coderabbit.svg" alt="CodeRabbit logo">
+                            <span class="newsletter__logos-name">Logos Are Us</span>
+                        </div>
+                        <div class="newsletter__logos-item">
+                            <img class="newsletter__logos-icon" src="assets/images/fireflyiii.svg" alt="Firefly III logo">
+                            <span class="newsletter__logos-name">Logos Are Us</span>
+                        </div>
+                        <div class="newsletter__logos-item">
+                            <img class="newsletter__logos-icon" src="assets/images/gerrit.svg" alt="Gerrit logo">
+                            <span class="newsletter__logos-name">Logos Are Us</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
