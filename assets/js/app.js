@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('form');
     const emailInput = document.querySelector('.newsletter__form-input');
     const invalidEmail = document.querySelector('.newsletter__form-input--error');
-    const modal = document.querySelector('.email-modal');
+    const modal = document.querySelector('.newsletter__email-modal');
     const userEmailSpan = document.querySelector('.user-email');
-    const closeBtn = document.querySelector('.email-modal__close');
+    const closeBtn = document.querySelector('.newsletter__modal-close');
     const container = document.querySelector('.container');
 
 
@@ -21,12 +21,27 @@ form.addEventListener('submit', (e) => {
         //Hide error
         invalidEmail.style.display = 'none';
         //Show modal
+        modal.style.display = 'flex';
+        container.style.display = 'none';
+
+        //Set user email in modal
+        userEmailSpan.textContent = emailInput.value;
     } else {
         //Show error
         invalidEmail.style.display = 'block';
         emailInput.style.borderColor = 'hsl(4, 100%, 67%)';
         emailInput.style.backgroundColor = '#ffe8e6';
     }
+});
+
+// Handle close modal
+closeBtn.addEventListener('click', () => {
+modal.style.display = 'none';
+container.style.display = 'flex';
+emailInput.value = '';
+emailInput.style.borderColor = 'hsl(231, 7%, 60%)';
+emailInput.style.backgroundColor = 'white';
 })
+
 
 });

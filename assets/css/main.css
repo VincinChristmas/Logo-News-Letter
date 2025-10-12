@@ -69,6 +69,66 @@ body {
 }
 
 
+ 
+
+    .newsletter__email-modal {
+
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 50%;
+        height: 80%;
+        position: fixed; /* Stays in place even when scrolling */
+        top: 7%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        border-radius: 50px;
+    }
+
+    .newsletter__email-modal img {
+        
+        max-width: 90%;
+        height: auto;  
+    }
+
+    .newsletter__email-modal h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--text-color);
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .newsletter__email-modal p {
+        font-size: 1.2rem;
+        color: var(--text-color);
+        text-align: center;
+        padding: 0 var(--spacing-md);
+    }
+
+    .newsletter__modal-close {
+        position: absolute;
+        top: 1rem; /* Position in top-right corner */
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem; /* Make "×" large enough to click */
+        cursor: pointer;
+        color: var(--text-color); /* Match your text color */
+        padding: 0.25rem;
+        line-height: 1; /* Ensure it's vertically centered */
+      }
+
+      .newsletter__modal-close:hover {
+        color: var(--secondary-color); /* Change color on hover */
+      }
+
+
+
 /*** BLOCK: .newsletter (Main Component) ***/
 .newsletter {
     max-width: 75rem;
@@ -292,6 +352,17 @@ body {
     .newsletter__logos-grid {
         gap: var(--spacing-lg);
     }
+
+    .newsletter__email-modal h1 {
+        font-size: 1.2rem; 
+    }
+
+    .newsletter__email-modal p {
+        font-size: 1rem;
+       
+    }
+
+
 }
 
 /* Mobile (480px and below) */
@@ -328,6 +399,15 @@ body {
     .newsletter__hero-heading {
         margin-bottom: var(--spacing-sm);
     }
+
+    .newsletter__email-modal h1 {
+        font-size: 0.8rem; 
+    }
+
+    .newsletter__email-modal p {
+        font-size: 0.7rem;
+       
+    }
 }
 
 /* Extra Small Mobile (375px and below) */
@@ -348,6 +428,15 @@ body {
         font-size: 0.8rem;
         left: 70px;
         top: -49px;
+    }
+
+    .newsletter__email-modal h1 {
+        font-size: 0.6rem; 
+    }
+
+    .newsletter__email-modal p {
+        font-size: 0.5rem;
+       
     }
 
    
