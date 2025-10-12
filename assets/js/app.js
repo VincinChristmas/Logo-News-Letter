@@ -1,26 +1,32 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const emailInput = document.getElementById('email-input');
-    const form = document.querySelector('newsletter__form');
-    
-    // Original placeholder
-    const defaultPlaceholder = "name@email.com";
+    const form = document.querySelector('form');
+    const emailInput = document.querySelector('.newsletter__form-input');
+    const invalidEmail = document.querySelector('.newsletter__form-input--error');
+    const modal = document.querySelector('.email-modal');
+    const userEmailSpan = document.querySelector('.user-email');
+    const closeBtn = document.querySelector('.email-modal__close');
+    const container = document.querySelector('.container');
 
-    // Error placeholder for invalid input
-    const errorPlaceholder = "Please enter a valid email (e.g., name@example.com)";
 
-    // Function to check validity and update placeholder
-    function checkEmailValidity() {
-        // Check if input is invalid (empty or not a valid email)
-        if (!emailInput.validity.valid) {
-            emailInput.placeholder = errorPlaceholder
-            //Add a red border to highlight the error
-            emailInput.classList.add('newsletter__form-input--error');
-        }
-        else {
-            // Revert to default placeholder 
-        }
+//Function to check if email is valid
+function emailValid(email) {
+    return /\S+@\S+\.\S+/.test(email);
+}
+
+//Handle form submit
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); //prevent form from submitting; stop page refresh
+
+    if (emailValid(emailInput.value)) {
+        //Hide error
+        invalidEmail.style.display = 'none';
+        //Show modal
+    } else {
+        //Show error
+        invalidEmail.style.display = 'block';
+        emailInput.style.borderColor = 'hsl(4, 100%, 67%)';
+        emailInput.style.backgroundColor = '#ffe8e6';
     }
-
-
-
 })
+
+});

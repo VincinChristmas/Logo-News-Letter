@@ -8,6 +8,7 @@
 </head>
 <body>
     <!-- Main Block: Newsletter (wraps entire component) -->
+     <main>
     <div class="newsletter">
         <!-- Element: Newsletter Hero (image + heading + intro text) -->
         <div class="newsletter__hero">
@@ -30,14 +31,17 @@
             <!-- Element: Newsletter Form -->
             <form class="newsletter__form" action="#" method="post">
                 <!-- Element: Form Input -->
+                
                 <input 
                     class="newsletter__form-input" 
                     id="email-input"
-                    type="email" 
+                    type="text" 
                     name="email" 
                     placeholder="name@email.com" 
-                    text 
                 />
+                <div class="newsletter__form-input--error">
+                    <p>Please enter a valid</p>
+                </div>
                 <!-- Element: Form Button -->
                 <button class="newsletter__form-button" type="submit">
                     Subscribe Now &rarr;
@@ -87,6 +91,7 @@
             </div>
         </div>
     </div>
+    </main>
     <script src="assets/js/app.js"></script>
 </body>
 </html>

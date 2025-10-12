@@ -161,6 +161,18 @@ body {
     font-family: var(--font-family);
 }
 
+/* Error state for the input */
+.newsletter__form-input--error {
+    display: none;
+    position: relative;
+    top: -43px;
+    left: 150px;
+    color: var(--secondary-color);
+    font-family: var(--font-family);
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
 /* Form Button */
 .newsletter__form-button {
     position: absolute;
@@ -274,6 +286,7 @@ body {
     .newsletter__form-button {
         padding: var(--spacing-md) var(--spacing-lg);
         right: 8%;
+        top:42%;
     }
 
     .newsletter__logos-grid {
@@ -296,6 +309,11 @@ body {
         max-width: 20rem;
         margin: 0 auto;
         padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .newsletter__form-input--error  {
+        left: 100px;
+        top: -59px;
     }
 
     .newsletter__logos-background::after,
@@ -325,4 +343,12 @@ body {
     .newsletter__logos-icon {
         width: 14px;
     }
+
+    .newsletter__form-input--error  {
+        font-size: 0.8rem;
+        left: 70px;
+        top: -49px;
+    }
+
+   
 }
