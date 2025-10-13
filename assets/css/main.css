@@ -69,64 +69,63 @@ body {
 }
 
 
- 
+/*** SUCCESS MODAL (Fully Responsive) ***/
+.newsletter__email-modal {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(280px, 90vw, 500px); /* Min 280px, max 500px, scales in between */
+    height: auto; /* Content defines height (no overflow) */
+    padding: var(--spacing-lg) var(--spacing-xl);
+    background: white;
+    border-radius: 50px;
+    z-index: 1000;
+    box-sizing: border-box; /* Padding included in width */
+}
 
-    .newsletter__email-modal {
+.newsletter__email-modal img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-lg);
+}
 
-        display: none;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        width: 50%;
-        height: 80%;
-        position: fixed; /* Stays in place even when scrolling */
-        top: 7%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: white;
-        border-radius: 50px;
-    }
+.newsletter__email-modal h1 {
+    font-size: clamp(1.2rem, 4vw, 2rem); /* Smooth responsive text */
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: var(--spacing-md);
+    text-align: center;
+}
 
-    .newsletter__email-modal img {
-        
-        max-width: 90%;
-        height: auto;  
-    }
+.newsletter__email-modal p {
+    font-size: clamp(0.9rem, 3vw, 1.2rem); /* Smooth responsive text */
+    color: var(--text-color);
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-lg);
+}
 
-    .newsletter__email-modal h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--text-color);
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
+.newsletter__modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+    padding: 0.25rem;
+    line-height: 1;
+}
 
-    .newsletter__email-modal p {
-        font-size: 1.2rem;
-        color: var(--text-color);
-        text-align: center;
-        padding: 0 var(--spacing-md);
-    }
-
-    .newsletter__modal-close {
-        position: absolute;
-        top: 1rem; /* Position in top-right corner */
-        right: 1rem;
-        background: none;
-        border: none;
-        font-size: 1.5rem; /* Make "×" large enough to click */
-        cursor: pointer;
-        color: var(--text-color); /* Match your text color */
-        padding: 0.25rem;
-        line-height: 1; /* Ensure it's vertically centered */
-      }
-
-      .newsletter__modal-close:hover {
-        color: var(--secondary-color); /* Change color on hover */
-      }
-
+.newsletter__modal-close:hover {
+    color: var(--secondary-color);
+}
 
 
 /*** BLOCK: .newsletter (Main Component) ***/
@@ -143,14 +142,12 @@ body {
     margin-bottom: var(--spacing-xl);
 }
 
-/* Hero Image Container (for blur overlay) */
 .newsletter__hero-image-container {
     position: relative;
     width: 100%;
     margin-bottom: var(--spacing-lg);
 }
 
-/* Hero Image */
 .newsletter__hero-image {
     display: block;
     width: 100%;
@@ -159,7 +156,6 @@ body {
     border-radius: 8px;
 }
 
-/* Hero Image Bottom Blur Overlay */
 .newsletter__hero-image-container::after {
     content: "";
     position: absolute;
@@ -174,7 +170,6 @@ body {
     border-bottom-right-radius: 8px;
 }
 
-/* Hero Heading */
 .newsletter__hero-heading {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 700;
@@ -183,7 +178,6 @@ body {
     margin-bottom: var(--spacing-md);
 }
 
-/* Hero Description */
 .newsletter__hero-desc {
     font-size: clamp(1rem, 3vw, 1.5rem);
     font-weight: 400;
@@ -209,7 +203,6 @@ body {
     position: relative;
 }
 
-/* Form Input */
 .newsletter__form-input {
     width: 100%;
     max-width: 40rem;
@@ -221,19 +214,20 @@ body {
     font-family: var(--font-family);
 }
 
-/* Error state for the input */
+/* Responsive Error Message */
 .newsletter__form-input--error {
     display: none;
     position: relative;
-    top: -43px;
-    left: 150px;
+    top: -1.25rem;
+    left: 0;
+    margin: 0 auto; /* Centers under input */
+    width: fit-content; /* Prevents weird wrapping */
     color: var(--secondary-color);
     font-family: var(--font-family);
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2vw, 1rem); /* Smooth responsive text */
     font-weight: bold;
-  }
+}
 
-/* Form Button */
 .newsletter__form-button {
     position: absolute;
     right: 5%;
@@ -258,7 +252,6 @@ body {
     margin-bottom: var(--spacing-xl);
 }
 
-/* Info Text */
 .newsletter__info-text {
     color: var(--text-color);
     line-height: 1.5;
@@ -273,13 +266,11 @@ body {
     margin-bottom: var(--spacing-xl);
 }
 
-/* Logos Background (for left/right blur) */
 .newsletter__logos-background {
     position: relative;
     padding: var(--spacing-md) 0;
 }
 
-/* Left Blur Overlay */
 .newsletter__logos-background::after {
     content: "";
     position: absolute;
@@ -292,7 +283,6 @@ body {
     -webkit-backdrop-filter: blur(2px);
 }
 
-/* Right Blur Overlay */
 .newsletter__logos-background::before {
     content: "";
     position: absolute;
@@ -305,7 +295,6 @@ body {
     -webkit-backdrop-filter: blur(2px);
 }
 
-/* Logos Grid (flex container for logo items) */
 .newsletter__logos-grid {
     display: flex;
     justify-content: center;
@@ -314,7 +303,6 @@ body {
     padding: 0 var(--spacing-sm);
 }
 
-/* Individual Logo Item */
 .newsletter__logos-item {
     display: flex;
     align-items: center;
@@ -322,20 +310,18 @@ body {
     color: var(--text-color);
 }
 
-/* Logo Icon */
 .newsletter__logos-icon {
     width: 20px;
     margin-right: 8px;
     vertical-align: middle;
 }
 
-/* Logo Name (text next to icon) */
 .newsletter__logos-name {
     font-size: 1rem;
 }
 
 
-/*** RESPONSIVE BREAKPOINTS ***/
+/*** RESPONSIVE BREAKPOINTS (Cleaned Up) ***/
 /* Tablet (768px and below) */
 @media only screen and (max-width: 768px) {
     .newsletter__logos-background::after,
@@ -346,23 +332,12 @@ body {
     .newsletter__form-button {
         padding: var(--spacing-md) var(--spacing-lg);
         right: 8%;
-        top:42%;
+        top: 42%;
     }
 
     .newsletter__logos-grid {
         gap: var(--spacing-lg);
     }
-
-    .newsletter__email-modal h1 {
-        font-size: 1.2rem; 
-    }
-
-    .newsletter__email-modal p {
-        font-size: 1rem;
-       
-    }
-
-
 }
 
 /* Mobile (480px and below) */
@@ -382,9 +357,9 @@ body {
         padding: var(--spacing-md) var(--spacing-lg);
     }
 
-    .newsletter__form-input--error  {
-        left: 100px;
-        top: -59px;
+    /* Tweak error message spacing for stacked button */
+    .newsletter__form-input--error {
+        top: -0.75rem;
     }
 
     .newsletter__logos-background::after,
@@ -398,15 +373,6 @@ body {
 
     .newsletter__hero-heading {
         margin-bottom: var(--spacing-sm);
-    }
-
-    .newsletter__email-modal h1 {
-        font-size: 0.8rem; 
-    }
-
-    .newsletter__email-modal p {
-        font-size: 0.7rem;
-       
     }
 }
 
@@ -423,21 +389,4 @@ body {
     .newsletter__logos-icon {
         width: 14px;
     }
-
-    .newsletter__form-input--error  {
-        font-size: 0.8rem;
-        left: 70px;
-        top: -49px;
-    }
-
-    .newsletter__email-modal h1 {
-        font-size: 0.6rem; 
-    }
-
-    .newsletter__email-modal p {
-        font-size: 0.5rem;
-       
-    }
-
-   
 }
